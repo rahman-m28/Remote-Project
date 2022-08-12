@@ -32,11 +32,13 @@ class Television:
     - It should only work for a TV that is on.
     - If the method is called when one is on the MAX_CHANNEL, it should take the TV channel back to the MIN_CHANNEL.
     """
-        if(self.__tv_status):
-            if(self.__default_channel+1<self.MAX_CHANNEL):
-                self.__default_channel+=1
-        
-        return self.__default_channel
+        if (self.__tv_status):
+            if (self.__default_channel + 1 < self.MAX_CHANNEL):
+                self.__default_channel += 1
+            else:
+                self.__default_channel = self.MIN_CHANNEL
+
+         return self.__default_channel
 
     def channel_down(self):
         """
@@ -70,12 +72,12 @@ class Television:
     - If the method is called when one is on the MIN_VOLUME, the volume should not be adjusted.
     """
         if (self.__tv_status):
-            if(self.__default_volume-1>=self.MIN_VOLUME):
-                self.__default_volume-=1
-                print("v down")
-        
-        return self.__default_volume
+            if (self.__default_channel - 1 >= self.MIN_CHANNEL):
+                self.__default_channel -= 1
+            else:
+                self.__default_channel = self.MAX_CHANNEL - 1
 
+        return self.__default_channel
     def get_volume(self):
         """
     - Returns the current value of the volume.    
