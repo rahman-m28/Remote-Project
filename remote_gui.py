@@ -72,7 +72,7 @@ class TVRemoteGUI(QMainWindow, QWidget):
         vbox.addWidget(self.power_btn)
         vbox.addStretch()
 
-        label = QLabel("Worked hard to create this thing")
+        label = QLabel("My Biggest Struggle")
         label.setAlignment(Qt.AlignCenter)
         vbox.addWidget(label)
         vbox.addStretch()
